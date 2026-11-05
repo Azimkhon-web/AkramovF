@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ÉTER — пространство вдохновения</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{
+    --bg:#080912;--ink:#f6f3ff;--muted:#aaa8c2;--violet:#9b8cff;--pink:#e9a7d8;--line:rgba(255,255,255,.13)}
+*{
+    box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope, sans-serif;overflow-x:hidden}
+body:before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 15% 10%,#30205b 0%,transparent 38%),radial-gradient(ellipse at 85% 45%,#171d49 0%,transparent 40%),radial-gradient(ellipse at 50% 100%,#25142f 0%,transparent 50%),#080912}
+.noise{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+nav{
+    display:flex;justify-content:space-between;align-items:center;padding:26px 7vw;position:absolute;top:0;width:100%;z-index:5}
+.logo{
+    letter-spacing:.25em;font-size:13px;font-weight:700}.logo span{color:var(--pink)}
+.navlinks{
+    display:flex;gap:32px;font-size:12px;color:#c6c3dc}.navlinks a{color:inherit;text-decoration:none;transition:.25s}.navlinks a:hover{color:white}
+.navbtn{
+    border:1px solid var(--line);padding:11px 18px;border-radius:30px;color:white;text-decoration:none;font-size:11px;letter-spacing:.04em;backdrop-filter:blur(10px)}
+.hero{
+    min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 20px 70px;position:relative;overflow:hidden}
+.eyebrow{
+    font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:#c4b9ff;display:flex;align-items:center;justify-content:center;gap:12px}.eyebrow:before,.eyebrow:after{content:"";width:34px;height:1px;background:#8274cf}
+h1{
+    font:500 clamp(56px,10vw,132px)/.98 "Playfair Display",serif;letter-spacing:-.045em;margin:28px 0 22px}h1 em{font-weight:500;color:#d7caff}
+.hero p{
+    max-width:510px;margin:0 auto;color:#b8b5ce;font-size:14px;line-height:1.9}
+.ctas{
+    display:flex;gap:13px;justify-content:center;margin-top:35px;flex-wrap:wrap}
+.btn{
+    border:1px solid rgba(255,255,255,.22);padding:15px 23px;border-radius:40px;text-decoration:none;color:white;font-size:12px;transition:.3s;display:inline-flex;align-items:center;gap:12px}
+.btn.primary{
+    background:linear-gradient(110deg,#a99bff,#e4a6d7);color:#171022;border:0;font-weight:700;box-shadow:0 0 45px #a28bff33}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 35px #a28bff30}
+.orb-wrap{
+    position:absolute;width:min(60vw,700px);aspect-ratio:1;top:46%;left:50%;transform:translate(-50%,-50%);z-index:-1;opacity:.75;pointer-events:none}
+.orb{
+    width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 30% 28%,#f2d8ff 0%,#b7a4ff 9%,#6654c8 23%,#28245d 42%,#0a0b19 67%);box-shadow:inset -40px -50px 90px #02030b,0 0 90px #9e85ff38;filter:saturate(1.2);animation:float 8s ease-in-out infinite}
+.orb:after{
+    content:"";position:absolute;inset:-8%;border:1px solid #c9baff20;border-radius:50%;transform:rotate(-25deg) scaleY(.35);box-shadow:0 0 30px #a89aff14}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-18px) rotate(5deg)}}
+.stars{
+    position:absolute;inset:0;pointer-events:none}.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;box-shadow:0 0 10px 2px #c9bdff;animation:twinkle 3s infinite alternate}@keyframes twinkle{from{opacity:.2;transform:scale(.7)}to{opacity:1;transform:scale(1.4)}}
+.scroll{
+    position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.25em;color:#8d89a8}.scroll:after{content:"";display:block;margin:12px auto 0;width:1px;height:30px;background:linear-gradient(#9b8cff,transparent)}
+section{
+    padding:110px 7vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:42px}.kicker{color:#a99cff;font-size:10px;letter-spacing:.25em;text-transform:uppercase}.section-head h2{font:500 clamp(36px,5vw,64px)/1.1 "Playfair Display",serif;margin:13px 0 0}.section-head p{max-width:300px;color:var(--muted);font-size:12px;line-height:1.8}
+.cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:320px;border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;overflow:hidden;background:linear-gradient(145deg,#ffffff0b,#ffffff02);transition:.4s}.card:hover{transform:translateY(-7px);border-color:#b9aaff66;background:#ffffff0d}
+.card .num{
+    font-size:10px;letter-spacing:.2em;color:#a9a2d0}.card h3{font:500 30px "Playfair Display",serif;margin:70px 0 12px}.card p{font-size:12px;line-height:1.8;color:#aaa7c4;max-width:260px}.card .symbol{position:absolute;right:24px;top:24px;font-size:42px;color:#c8bcff;opacity:.7}
+.card:after{
+    content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-60px;bottom:-100px;background:#8b78ff22;filter:blur(20px)}
+.quote{
+    text-align:center;padding:130px 20px;background:linear-gradient(180deg,transparent,#a28cff08,transparent)}.quote blockquote{font:italic 500 clamp(30px,5vw,60px)/1.3 "Playfair Display",serif;max-width:900px;margin:25px auto}.quote small{font-size:10px;letter-spacing:.25em;color:#aaa5c6}
+.cta-panel{
+    border:1px solid #ffffff1a;border-radius:28px;padding:70px 30px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#a38cff22,transparent 65%),#ffffff05;max-width:1000px;margin:auto}.cta-panel h2{font:500 clamp(38px,6vw,72px) "Playfair Display",serif;margin:18px 0}.cta-panel p{color:var(--muted);font-size:13px;margin-bottom:28px}
+footer{
+    padding:30px 7vw;display:flex;justify-content:space-between;gap:20px;color:#77748f;font-size:10px;border-top:1px solid #ffffff0b;letter-spacing:.08em}
+@media(max-width:700px){.navlinks{display:none}.hero{min-height:90vh}.orb-wrap{width:100vw;top:44%}.section-head{display:block}.section-head p{margin-top:20px}.cards{grid-template-columns:1fr}.card{min-height:260px}.card h3{margin-top:50px}section{padding:80px 6vw}.quote{padding:90px 20px}footer{flex-direction:column;text-align:center}.navbtn{padding:9px 13px}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<nav><div class="logo">ÉT<span>E</span>R</div><div class="navlinks"><a href="#about">Акрамов</a><a href="#spaces">ФарходжонАко</a><a href="#inspiration">Вдохновение</a></div><a class="navbtn" href="#begin">Начать путешествие ↗</a></nav>
+<header class="hero">
+<div class="orb-wrap"><div class="orb"></div></div><div class="stars" id="stars"></div>
+<div><div class="eyebrow">Место за пределами привычного</div><h1>Акрамов<br><em>ФарходжонАко.</em></h1><p>Иногда, чтобы найти что-то новое, нужно просто остановиться. Добро пожаловать в пространство тишины, света и вдохновения.</p><div class="ctas"><a class="btn primary" href="#about">Исследовать пространство <span>↗</span></a><a class="btn" href="#inspiration">Ощутить момент ↓</a></div></div><div class="scroll">ПРОКРУТИ ВНИЗ</div>
+</header>
+<section id="about"><div class="section-head"><div><div class="kicker">01 / Философия</div><h2>Красота — это<br><em>чувство, а не форма.</em></h2></div><p>Мир становится удивительным, когда мы смотрим на него чуть медленнее. Здесь нет спешки — только настоящее.</p></div>
+<div class="cards" id="spaces"><article class="card"><span class="num">01 — ТИШИНА</span><span class="symbol">☾</span><h3>Найди покой</h3><p>Оставь шум позади. Внутри тишины рождаются самые ясные мысли.</p></article><article class="card"><span class="num">02 — СВЕТ</span><span class="symbol">✧</span><h3>Заметь детали</h3><p>Свет на стене. Ветер в листьях. Мгновение, которое больше не повторится.</p></article><article class="card"><span class="num">03 — МЕЧТА</span><span class="symbol">∞</span><h3>Будь без границ</h3><p>Позволь воображению вести тебя туда, где ещё не существует карт.</p></article></div></section>
+<div class="quote" id="inspiration"><small>МАЛЕНЬКОЕ НАПОМИНАНИЕ</small><blockquote>«У Вселенной есть особый способ удивлять тех, кто не перестаёт смотреть вверх».</blockquote><div class="kicker">— ÉTER · заметки о прекрасном</div></div>
+<section id="begin"><div class="cta-panel"><div class="kicker">ТВОЁ МГНОВЕНИЕ НАЧИНАЕТСЯ ЗДЕСЬ</div><h2>А что, если всё<br><em>только начинается?</em></h2><p>Сделай глубокий вдох. Посмотри вокруг. Ты уже внутри чего-то прекрасного.</p><a href="#top" class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Вернуться к звёздам ↑</a></div></section>
+<footer><span>© 2026 ÉTER — DIGITAL EXPERIENCE</span><span>СОЗДАНО ИЗ СВЕТА И ВООБРАЖЕНИЯ ✦</span></footer>
+<script>
+const root=document.getElementById('stars');
+for(let i=0;i<75;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*4+'s';s.style.opacity=Math.random();root.appendChild(s)}
+document.addEventListener('mousemove',e=>{const orb=document.querySelector('.orb');const x=(e.clientX/window.innerWidth-.5)*12;const y=(e.clientY/window.innerHeight-.5)*12;orb.style.marginLeft=x+'px';orb.style.marginTop=y+'px'});
+</script>
+</body>
+</html>
